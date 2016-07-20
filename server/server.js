@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-app.use('/vendors', express.static('client/vendors'));
+app.use(express.static('client'));
 
 app.get('*', function(req, res){
 	res.sendFile(path.normalize(__dirname + '/../client/index.html'));
